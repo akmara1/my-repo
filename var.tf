@@ -1,6 +1,6 @@
 variable "loc" {}
 variable "name" {}
 variable "cidr_blocks" {
-  type = list
+  type = list(string)
 }
 variable "address" {}
