@@ -35,8 +35,7 @@ resource "azurerm_virtual_network" "vnet" {
 
 resource "azurerm_subnet" "subnets" {
   resource_group_name = azurerm_resource_group.rg.name
-  count = length(var.cidr_blocks)
-  name                 = "subnet${count.index}"
+  name                 = "subnet"
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes       = [var.cidr_blocks[count.index]]
+  address_prefixes       = [var.cidr_blocks]
 }
