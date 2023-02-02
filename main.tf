@@ -1,4 +1,12 @@
 terraform {
+    cloud {
+    organization = "my-first-org-akmo"
+
+    workspaces {
+      name = "my-repo"
+    }
+  }
+
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
